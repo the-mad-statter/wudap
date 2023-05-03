@@ -59,6 +59,8 @@ sticker(
   u_y = 0.1,
   filename = paste0("img/", params$package, "_hex.png")
 )
+
+# `r badger::badge_codecov()`
 ```
 
 # `r params$package` <img src="img/`r params$package`_hex.png" align="right" width="125px" />
@@ -66,16 +68,14 @@ sticker(
 <!-- badges: start -->
 `r badger::badge_repostatus("WIP")`
 `r badger::badge_lifecycle("experimental")`
-<!-- `badger::badge_github_version(color = "yellow")` -->
-<!-- `badger::badge_last_commit(branch = "main")` -->
-
+`r badger::badge_github_version(color = "yellow")`
+`r badger::badge_last_commit(branch = "main")`
 `r badger::badge_license()`
 <br />
-<!--`r badger::badge_github_actions(action = "Style")`
-`r badger::badge_github_actions(action = "lint")` -->
-<!-- `badger::badge_github_actions(action = "test-coverage")` -->
-<!-- `badger::badge_codecov()` -->
-<!-- `badger::badge_github_actions(action = "R-CMD-check")` -->
+`r badger::badge_github_actions(action = "Style")`
+`r badger::badge_github_actions(action = "lint")`
+`r badger::badge_github_actions(action = "test-coverage")`
+`r badger::badge_github_actions(action = "R-CMD-check")`
 <!-- badges: end -->
 
 ## Overview

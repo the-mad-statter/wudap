@@ -9,17 +9,18 @@
 has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-<!-- `badger::badge_github_version(color = "yellow")` -->
-<!-- `badger::badge_last_commit(branch = "main")` -->
-
+[![](https://img.shields.io/badge/devel%20version-0.1.0-yellow.svg)](https://github.com/the-mad-statter/wudap)
+[![](https://img.shields.io/github/last-commit/the-mad-statter/wudap.svg)](https://github.com/the-mad-statter/wudap/commits/main)
 [![License: GPL (\>=
 3)](https://img.shields.io/badge/license-GPL%20(%3E=%203)-blue.svg)](https://cran.r-project.org/web/licenses/GPL%20(%3E=%203))
-<br />
-<!--[![R build status](https://github.com/the-mad-statter/wudap/workflows/Style/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
-[![R build status](https://github.com/the-mad-statter/wudap/workflows/lint/badge.svg)](https://github.com/the-mad-statter/wudap/actions) -->
-<!-- `badger::badge_github_actions(action = "test-coverage")` -->
-<!-- `badger::badge_codecov()` -->
-<!-- `badger::badge_github_actions(action = "R-CMD-check")` -->
+<br /> [![R build
+status](https://github.com/the-mad-statter/wudap/workflows/Style/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
+[![R build
+status](https://github.com/the-mad-statter/wudap/workflows/lint/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
+[![R build
+status](https://github.com/the-mad-statter/wudap/workflows/test-coverage/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
+[![R build
+status](https://github.com/the-mad-statter/wudap/workflows/R-CMD-check/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
 <!-- badges: end -->
 
 ## Overview
