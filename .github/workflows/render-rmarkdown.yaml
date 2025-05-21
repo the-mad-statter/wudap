@@ -2,45 +2,32 @@
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
   push:
-    paths:
-      - '**.Rmd'
-      - '!vignettes/*.Rmd'
-      - '!docs_src/*.Rmd'
+    paths: ['**.Rmd']
 
-name: render-rmarkdown
+name: render-rmarkdown.yaml
+
+permissions: read-all
 
 jobs:
   render-rmarkdown:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    permissions:
+      contents: write
     steps:
-      - name: Install system requirements
-        if: runner.os == 'Linux'
-        run: |
-          sudo apt-get install -y libssh-dev
-          sudo apt-get install -y libcurl4-openssl-dev
-
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - uses: r-lib/actions/setup-pandoc@v2
 
       - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: renv
 
       - uses: r-lib/actions/setup-renv@v2
-      
-      - name: Install rmd dependencies
-        run: |
-          install.packages("badger")
-        shell: Rscript {0}
-
-      - name: Install rmarkdown
-        run: |
-          install.packages("rmarkdown")
-        shell: Rscript {0}
 
       - name: Render Rmarkdown files and Commit Results
         run: |

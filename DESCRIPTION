@@ -1,6 +1,6 @@
 Package: wudap
 Type: Package
-Title: Simplistic LDAP Client in R for Washington University
+Title: LDAP Client in R for Washington University in Saint Louis
 Version: 0.1.0
 Authors@R: 
     person(given = "Matthew",
@@ -8,15 +8,18 @@ Authors@R:
            role = c("aut", "cre"),
            email = "matt@themadstatter.com",
            comment = c(ORCID = "0000-0001-5755-1725"))
-Description: Perform LDAP queries in R at Washington University.
+Description: Perform LDAP queries in R using 
+    [{reticulate}](https://rstudio.github.io/reticulate/) and the 
+    [ldap3 Python library](https://ldap3.readthedocs.io/en/latest/) at 
+    Washington University in Saint Louis.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/the-mad-statter/wudap
 BugReports: https://github.com/the-mad-statter/wudap/issues
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Imports: 
-    ldap
-Remotes: 
-    the-mad-statter/ldap
+    purrr,
+    reticulate,
+    tibble

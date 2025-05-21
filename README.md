@@ -25,8 +25,8 @@ status](https://github.com/the-mad-statter/wudap/workflows/R-CMD-check/badge.svg
 
 ## Overview
 
-The R package `wudap` is a simplistic LDAP client for Washington
-University.
+The R package `wudap` is an LDAP Client in R for Washington University
+in Saint Louis
 
 <br />
 
@@ -37,6 +37,25 @@ You can install `wudap` from
 
 ``` r
 pak::pkg_install("the-mad-statter/wudap")
+```
+
+<br />
+
+## Usage
+
+``` r
+library(wudap)
+
+wudap_connect() |>
+  wudap_search(
+    search_filter = "(sn=Schuelke)", 
+    attributes = c("sn", "givenName", "personalTitle")
+  ) |>
+  as_tibble()
+#> # A tibble: 1 × 3
+#>   sn       givenName personalTitle
+#>   <chr>    <chr>     <chr>        
+#> 1 Schuelke Matthew   Dr.
 ```
 
 <br />
@@ -66,7 +85,7 @@ The use of [{styler}](https://github.com/r-lib/styler) and
 
 Established in 1853, [Washington University in Saint
 Louis](https://www.wustl.edu) is among the world’s leaders in teaching,
-research, patient care, and service to society. Bosting 24 Nobel
+research, patient care, and service to society. Boasting 24 Nobel
 laureates to date, the University is ranked 7th in the world for most
 cited researchers, received the 4th highest amount of NIH medical
 research grants among medical schools in 2019, and was tied for 1st in

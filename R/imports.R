@@ -1,21 +1,9 @@
-#' Pipe operator
+#' Dynamic dots features
 #'
-#' See `ldap::[\%>\%][ldap::pipe]` for details.
+#' See [`rlang::dyn-dots`] for details.
 #'
-#' @name %>%
-#' @rdname pipe
+#' @name :=
+#' @rdname dyn-dots
 #' @keywords internal
-#' @export
-#' @importFrom ldap %>%
-NULL
-
-#' Coerce an LDAP response to a data frame
-#'
-#' See `ldap::[content_to_tibble][ldap::content_to_tibble]` for details.
-#'
-#' @name content_to_tibble
-#' @rdname content_to_tibble
-#' @keywords internal
-#' @export
-#' @importFrom ldap content_to_tibble
+#' @importFrom rlang :=
 NULL
