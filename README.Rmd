@@ -102,7 +102,7 @@ library(wudap)
 
 wudap_connect() |>
   wudap_search(
-    search_filter = "(sn=Schuelke)", 
+    search_filter = "(sn=Schuelke)",
     attributes = c("sn", "givenName", "personalTitle")
   ) |>
   as_tibble()
