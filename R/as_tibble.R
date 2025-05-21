@@ -1,5 +1,5 @@
 #' @exportS3Method wudap::as_tibble
-as_tibble.ldap3_response <- function(x) {
+as_tibble.ldap3_response <- function(x, ...) {
   entries <- x[[3]]
 
   purrr::map(entries, \(entry) {
@@ -23,5 +23,12 @@ as_tibble.ldap3_response <- function(x) {
     purrr::list_rbind()
 }
 
+#' Coerce an ldap3 response to a data frames
+#'
+#' @param x object of type "ldap3_response"
+#' @param ... Unused, for extensibility.
+#'
 #' @export
-as_tibble <- function(x, ...) UseMethod("as_tibble")
+as_tibble <- function(x, ...) {
+  UseMethod("as_tibble")
+}

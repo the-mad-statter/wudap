@@ -69,19 +69,17 @@ sticker(
 `r badger::badge_repostatus("WIP")`
 `r badger::badge_lifecycle("experimental")`
 `r badger::badge_github_version(color = "yellow")`
-`r badger::badge_last_commit(branch = "main")`
 `r badger::badge_license()`
 <br />
-`r badger::badge_github_actions(action = "Style")`
+`r badger::badge_last_commit(branch = "main")`
+`r badger::badge_github_actions(action = "style")`
 `r badger::badge_github_actions(action = "lint")`
-`r badger::badge_github_actions(action = "test-coverage")`
 `r badger::badge_github_actions(action = "R-CMD-check")`
-[![R-CMD-check](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
 
-The R package ``r params$package`` is an LDAP Client in R for Washington University in Saint Louis
+The R package ``r params$package`` is an LDAP Client in R for Washington University in Saint Louis.
 
 <br />
 
@@ -93,16 +91,22 @@ You can install ``r params$package`` from [GitHub](https://github.com/`r params$
 pak::pkg_install("`r params$github`/`r params$package`")
 ```
 
+If you manage your own Python installation, you may also have to install the [ldap3](https://ldap3.readthedocs.io/en/latest/) Python library.
+
+```r
+reticulate::py_install("ldap3")
+```
+
 <br />
 
 ## Usage
 
-```{r, eval=TRUE}
+```{r}
 library(wudap)
 
 wudap_connect() |>
   wudap_search(
-    search_filter = "(sn=Schuelke)", 
+    search_filter = "(sn=Schuelke)",
     attributes = c("sn", "givenName", "personalTitle")
   ) |>
   as_tibble()

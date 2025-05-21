@@ -10,15 +10,14 @@ has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![](https://img.shields.io/badge/devel%20version-0.1.0-yellow.svg)](https://github.com/the-mad-statter/wudap)
-[![](https://img.shields.io/github/last-commit/the-mad-statter/wudap.svg)](https://github.com/the-mad-statter/wudap/commits/main)
 [![License: GPL (\>=
 3)](https://img.shields.io/badge/license-GPL%20(%3E=%203)-blue.svg)](https://cran.r-project.org/web/licenses/GPL%20(%3E=%203))
-<br /> [![R build
-status](https://github.com/the-mad-statter/wudap/workflows/Style/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
+<br />
+[![](https://img.shields.io/github/last-commit/the-mad-statter/wudap.svg)](https://github.com/the-mad-statter/wudap/commits/main)
+[![R build
+status](https://github.com/the-mad-statter/wudap/workflows/style/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
 [![R build
 status](https://github.com/the-mad-statter/wudap/workflows/lint/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
-[![R build
-status](https://github.com/the-mad-statter/wudap/workflows/test-coverage/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
 [![R build
 status](https://github.com/the-mad-statter/wudap/workflows/R-CMD-check/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
 <!-- badges: end -->
@@ -26,7 +25,7 @@ status](https://github.com/the-mad-statter/wudap/workflows/R-CMD-check/badge.svg
 ## Overview
 
 The R package `wudap` is an LDAP Client in R for Washington University
-in Saint Louis
+in Saint Louis.
 
 <br />
 
@@ -39,6 +38,13 @@ You can install `wudap` from
 pak::pkg_install("the-mad-statter/wudap")
 ```
 
+If you manage your own Python installation, you may also have to install
+the [ldap3](https://ldap3.readthedocs.io/en/latest/) Python library.
+
+``` r
+reticulate::py_install("ldap3")
+```
+
 <br />
 
 ## Usage
@@ -48,14 +54,10 @@ library(wudap)
 
 wudap_connect() |>
   wudap_search(
-    search_filter = "(sn=Schuelke)", 
+    search_filter = "(sn=Schuelke)",
     attributes = c("sn", "givenName", "personalTitle")
   ) |>
   as_tibble()
-#> # A tibble: 1 × 3
-#>   sn       givenName personalTitle
-#>   <chr>    <chr>     <chr>        
-#> 1 Schuelke Matthew   Dr.
 ```
 
 <br />

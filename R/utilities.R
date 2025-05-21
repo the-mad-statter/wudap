@@ -8,7 +8,7 @@ str_split_1 <- function(string, pattern, ...) {
 
 parse_keys <- function(dict) {
   dict[["keys"]]() |>
-    capture.output() |>
+    utils::capture.output() |>
     str_remove("dict_keys\\(\\[") |>
     str_remove("\\]\\)") |>
     str_remove("'") |>

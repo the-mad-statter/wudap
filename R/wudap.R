@@ -1,7 +1,7 @@
 #' Connect to WashU LDAP Server
 #'
-#' @param user WashU Key ID
-#' @param password WashU Key password
+#' @param washu_key_id WashU Key ID
+#' @param washu_key_password WashU Key password
 #'
 #' @return object of type "ldap3.core.connection.Connection"
 #' @export

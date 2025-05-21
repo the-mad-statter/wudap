@@ -10,9 +10,9 @@ wudap_connect(
 )
 }
 \arguments{
-\item{user}{WashU Key ID}
+\item{washu_key_id}{WashU Key ID}
 
-\item{password}{WashU Key password}
+\item{washu_key_password}{WashU Key password}
 }
 \value{
 object of type "ldap3.core.connection.Connection"
