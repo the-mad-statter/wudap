@@ -59,8 +59,6 @@ sticker(
   u_y = 0.1,
   filename = paste0("img/", params$package, "_hex.png")
 )
-
-# `r badger::badge_codecov()`
 ```
 
 # `r params$package` <img src="img/`r params$package`_hex.png" align="right" width="125px" />
