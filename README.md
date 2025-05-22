@@ -9,17 +9,14 @@
 has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![](https://img.shields.io/badge/devel%20version-0.1.0-yellow.svg)](https://github.com/the-mad-statter/wudap)
+[![](https://img.shields.io/badge/devel%20version-1.0.0-yellow.svg)](https://github.com/the-mad-statter/wudap)
 [![License: GPL (\>=
 3)](https://img.shields.io/badge/license-GPL%20(%3E=%203)-blue.svg)](https://cran.r-project.org/web/licenses/GPL%20(%3E=%203))
 <br />
 [![](https://img.shields.io/github/last-commit/the-mad-statter/wudap.svg)](https://github.com/the-mad-statter/wudap/commits/main)
-[![R build
-status](https://github.com/the-mad-statter/wudap/workflows/style/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
-[![R build
-status](https://github.com/the-mad-statter/wudap/workflows/lint/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
-[![R build
-status](https://github.com/the-mad-statter/wudap/workflows/R-CMD-check/badge.svg)](https://github.com/the-mad-statter/wudap/actions)
+[![style](https://github.com/the-mad-statter/wudap/actions/workflows/style.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/style.yaml)
+[![lint](https://github.com/the-mad-statter/wudap/actions/workflows/lint.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/lint.yaml)
+[![R-CMD-check](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
@@ -39,7 +36,8 @@ pak::pkg_install("the-mad-statter/wudap")
 ```
 
 If you manage your own Python environment, you may also have to install
-the [ldap3](https://ldap3.readthedocs.io/en/latest/) Python library.
+the [ldap3](https://ldap3.readthedocs.io/en/latest/) Python library with
+something like:
 
 ``` r
 reticulate::py_install("ldap3")

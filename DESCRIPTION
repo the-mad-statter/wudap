@@ -1,7 +1,7 @@
 Package: wudap
 Type: Package
 Title: LDAP Client in R for Washington University in Saint Louis
-Version: 0.1.0
+Version: 1.0.0
 Authors@R: 
     person(given = "Matthew",
            family = "Schuelke",

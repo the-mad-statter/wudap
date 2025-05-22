@@ -70,9 +70,9 @@ sticker(
 `r badger::badge_license()`
 <br />
 `r badger::badge_last_commit(branch = "main")`
-`r badger::badge_github_actions(action = "style")`
-`r badger::badge_github_actions(action = "lint")`
-`r badger::badge_github_actions(action = "R-CMD-check")`
+[![style](https://github.com/the-mad-statter/wudap/actions/workflows/style.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/style.yaml)
+[![lint](https://github.com/the-mad-statter/wudap/actions/workflows/lint.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/lint.yaml)
+[![R-CMD-check](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
@@ -89,7 +89,7 @@ You can install ``r params$package`` from [GitHub](https://github.com/`r params$
 pak::pkg_install("`r params$github`/`r params$package`")
 ```
 
-If you manage your own Python environment, you may also have to install the [ldap3](https://ldap3.readthedocs.io/en/latest/) Python library.
+If you manage your own Python environment, you may also have to install the [ldap3](https://ldap3.readthedocs.io/en/latest/) Python library with something like:
 
 ```r
 reticulate::py_install("ldap3")
