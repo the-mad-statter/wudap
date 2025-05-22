@@ -36,8 +36,7 @@ pak::pkg_install("the-mad-statter/wudap")
 ```
 
 If you manage your own Python environment, you may also have to install
-the [ldap3](https://ldap3.readthedocs.io/en/latest/) Python library with
-something like:
+the [ldap3](https://ldap3.readthedocs.io/en/latest/) Python library:
 
 ``` r
 reticulate::py_install("ldap3")
@@ -52,7 +51,7 @@ library(wudap)
 
 wudap_connect() |>
   wudap_search(
-    search_filter = "(sn=Schuelke)",
+    search_filter = "(sn=Bear)",
     attributes = c("sn", "givenName", "personalTitle")
   ) |>
   as_tibble()

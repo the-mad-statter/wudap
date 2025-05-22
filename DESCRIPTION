@@ -8,9 +8,9 @@ Authors@R:
            role = c("aut", "cre"),
            email = "matt@themadstatter.com",
            comment = c(ORCID = "0000-0001-5755-1725"))
-Description: Perform LDAP queries in R using 
-    [{reticulate}](https://rstudio.github.io/reticulate/) and the 
-    [ldap3 Python library](https://ldap3.readthedocs.io/en/latest/) at 
+Description: Perform LDAP queries in R using the 
+    [reticulate](https://rstudio.github.io/reticulate/) R library and the 
+    [ldap3](https://ldap3.readthedocs.io/en/latest/) Python library at 
     Washington University in Saint Louis.
 License: GPL (>= 3)
 Encoding: UTF-8

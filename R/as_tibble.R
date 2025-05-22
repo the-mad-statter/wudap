@@ -8,11 +8,21 @@ as_tibble.ldap3_response <- function(x, ...) {
     purrr::map(parse_keys(dict), \(key) {
       value <- dict[["get"]](key)
 
-      if ("python.builtin.bytes" %in% class(value)) {
-        value <- as.raw(value)
+      if (value %is_not% "list" && length(value) > 1) {
+        value <- list(value)
       }
 
-      if (length(value) > 1) {
+      if (value %is% "list") {
+        value <- purrr::map(value, \(list_element) {
+          if (list_element %is% "python.builtin.bytes") {
+            as.raw(list_element)
+          } else {
+            list_element
+          }
+        })
+      }
+
+      if (value %is% "list" && length(value) > 1) {
         value <- list(value)
       }
 

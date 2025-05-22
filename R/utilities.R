@@ -15,6 +15,14 @@ parse_keys <- function(dict) {
     str_split_1(", ")
 }
 
+`%is%` <- function(lhs, rhs) {
+  rhs %in% class(lhs)
+}
+
+`%is_not%` <- function(lhs, rhs) {
+  !(lhs %is% rhs)
+}
+
 #' Save thumbnailPhoto
 #'
 #' @param x raw bytes to save

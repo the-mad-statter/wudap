@@ -89,7 +89,7 @@ You can install ``r params$package`` from [GitHub](https://github.com/`r params$
 pak::pkg_install("`r params$github`/`r params$package`")
 ```
 
-If you manage your own Python environment, you may also have to install the [ldap3](https://ldap3.readthedocs.io/en/latest/) Python library with something like:
+If you manage your own Python environment, you may also have to install the [ldap3](https://ldap3.readthedocs.io/en/latest/) Python library:
 
 ```r
 reticulate::py_install("ldap3")
@@ -104,7 +104,7 @@ library(wudap)
 
 wudap_connect() |>
   wudap_search(
-    search_filter = "(sn=Schuelke)",
+    search_filter = "(sn=Bear)",
     attributes = c("sn", "givenName", "personalTitle")
   ) |>
   as_tibble()

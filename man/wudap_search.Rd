@@ -31,8 +31,25 @@ Perform LDAP Search
 }
 \examples{
 \dontrun{
+## connect to server
 conn <- wudap_connect()
-response <- wudap_search(conn, "(mail=schuelke@wustl.edu)")
-data <- as_tibble(response)
+
+## Example 1: all attributes for Winnie using his mail attribute
+conn |>
+  wudap_search("(mail=pooh@wustl.edu)") |>
+  as_tibble()
+
+## Example 2: all attributes for Paddington and Yogi
+conn |>
+  wudap_search("(&(|(givenName=Paddington)(givenName=Yogi))(sn=Bear))") |>
+  as_tibble()
+
+## Example 3: sn, givenName, and personalTitle attributes for Fozzie
+conn |>
+  wudap_search(
+    "(&(givenName=Fozzie)(sn=Bear))",
+    c("sn", "givenName", "personalTitle")
+  ) |>
+  as_tibble()
 }
 }
