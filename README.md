@@ -14,9 +14,9 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 3)](https://img.shields.io/badge/license-GPL%20(%3E=%203)-blue.svg)](https://cran.r-project.org/web/licenses/GPL%20(%3E=%203))
 <br />
 [![](https://img.shields.io/github/last-commit/the-mad-statter/wudap.svg)](https://github.com/the-mad-statter/wudap/commits/main)
-[![style](https://github.com/the-mad-statter/wudap/actions/workflows/style/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/style)
-[![lint](https://github.com/the-mad-statter/wudap/actions/workflows/lint/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/lint)
-[![R-CMD-check](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check)
+[![style](https://github.com/the-mad-statter/wudap/actions/workflows/style.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/style.yaml)
+[![lint](https://github.com/the-mad-statter/wudap/actions/workflows/lint.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/lint.yaml)
+[![R-CMD-check](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
