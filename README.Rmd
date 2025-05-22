@@ -70,9 +70,9 @@ sticker(
 `r badger::badge_license()`
 <br />
 `r badger::badge_last_commit(branch = "main")`
-[![style](https://github.com/the-mad-statter/wudap/actions/workflows/style.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/style.yaml)
-[![lint](https://github.com/the-mad-statter/wudap/actions/workflows/lint.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/lint.yaml)
-[![R-CMD-check](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check.yaml)
+[![style](https://github.com/the-mad-statter/wudap/actions/workflows/style/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/style)
+[![lint](https://github.com/the-mad-statter/wudap/actions/workflows/lint/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/lint)
+[![R-CMD-check](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check/badge.svg)](https://github.com/the-mad-statter/wudap/actions/workflows/R-CMD-check)
 <!-- badges: end -->
 
 ## Overview
