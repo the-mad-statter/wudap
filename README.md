@@ -38,7 +38,7 @@ You can install `wudap` from
 pak::pkg_install("the-mad-statter/wudap")
 ```
 
-If you manage your own Python installation, you may also have to install
+If you manage your own Python environment, you may also have to install
 the [ldap3](https://ldap3.readthedocs.io/en/latest/) Python library.
 
 ``` r
