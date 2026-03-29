@@ -1,27 +1,4 @@
-str_remove <- function(string, pattern, ...) {
-  gsub(pattern = pattern, replacement = "", x = string, ...)
-}
-
-str_split_1 <- function(string, pattern, ...) {
-  strsplit(string, pattern, ...)[[1]]
-}
-
-parse_keys <- function(dict) {
-  dict[["keys"]]() |>
-    utils::capture.output() |>
-    str_remove("dict_keys\\(\\[") |>
-    str_remove("\\]\\)") |>
-    str_remove("'") |>
-    str_split_1(", ")
-}
-
-`%is%` <- function(lhs, rhs) {
-  rhs %in% class(lhs)
-}
-
-`%is_not%` <- function(lhs, rhs) {
-  !(lhs %is% rhs)
-}
+`%||%` <- function(x, y) if (is.null(x)) y else x
 
 #' Save thumbnailPhoto
 #'

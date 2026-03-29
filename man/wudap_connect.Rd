@@ -5,14 +5,14 @@
 \title{Connect to WashU LDAP Server}
 \usage{
 wudap_connect(
-  washu_key_id = sprintf("\%s@wustl.edu", Sys.getenv("WASHU_KEY_ID")),
-  washu_key_password = Sys.getenv("WASHU_KEY_PASSWORD")
+  washu_key_user = sprintf("\%s@wustl.edu", Sys.getenv("WASHU_KEY_USER")),
+  washu_key_pass = Sys.getenv("WASHU_KEY_PASS")
 )
 }
 \arguments{
-\item{washu_key_id}{WashU Key ID}
+\item{washu_key_user}{WashU Key User}
 
-\item{washu_key_password}{WashU Key password}
+\item{washu_key_pass}{WashU Key Password}
 }
 \value{
 object of type "ldap3.core.connection.Connection"

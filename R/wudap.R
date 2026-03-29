@@ -1,7 +1,7 @@
 #' Connect to WashU LDAP Server
 #'
-#' @param washu_key_id WashU Key ID
-#' @param washu_key_password WashU Key password
+#' @param washu_key_user WashU Key User
+#' @param washu_key_pass WashU Key Password
 #'
 #' @return object of type "ldap3.core.connection.Connection"
 #' @export
@@ -11,20 +11,17 @@
 #' conn <- wudap_connect()
 #' }
 wudap_connect <- function(
-    washu_key_id = sprintf("%s@wustl.edu", Sys.getenv("WASHU_KEY_ID")),
-    washu_key_password = Sys.getenv("WASHU_KEY_PASSWORD")) {
-  server <- ldap3$Server("accounts.ad.wustl.edu")
-
-  connection <- ldap3$Connection(
-    server,
-    washu_key_id,
-    washu_key_password,
-    client_strategy = ldap3$SAFE_SYNC,
-    auto_bind = ldap3$AUTO_BIND_NO_TLS
+  washu_key_user = sprintf("%s@wustl.edu", Sys.getenv("WASHU_KEY_USER")),
+  washu_key_pass = Sys.getenv("WASHU_KEY_PASS")
+) {
+  ldap3[["Connection"]](
+    server = server,
+    user = washu_key_user,
+    password = washu_key_pass,
+    auto_bind = TRUE
   )
-
-  return(connection)
 }
+
 
 # nolint start: line_length_linter.
 
@@ -63,21 +60,21 @@ wudap_connect <- function(
 #'   as_tibble()
 #' }
 wudap_search <- function(
-    conn,
-    search_filter,
-    attributes = c("*"),
-    search_base = "OU=Current,OU=People,DC=accounts,DC=ad,DC=wustl,DC=edu",
-    ...) {
-  response <- conn[["search"]](
-    search_base,
-    search_filter,
-    attributes = attributes,
-    ...
+  conn,
+  search_filter,
+  attributes = c("*"),
+  search_base = "OU=Current,OU=People,DC=accounts,DC=ad,DC=wustl,DC=edu",
+  ...
+) {
+  conn[["search"]](
+    search_base = search_base,
+    search_filter = search_filter,
+    attributes = attributes
   )
 
-  class(response) <- "ldap3_response"
-
-  return(response)
+  entries <- conn[["entries"]]
+  class(entries) <- "ldap_entries"
+  entries
 }
 
 # nolint end
