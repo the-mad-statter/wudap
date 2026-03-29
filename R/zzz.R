@@ -2,7 +2,7 @@ ldap3 <- NULL
 server <- NULL
 
 .onLoad <- function(libname, pkgname) {
-  reticulate::py_require(c("ldap3", "ssl"))
+  reticulate::py_require("ldap3")
   ldap3 <<- reticulate::import("ldap3")
   ssl <- reticulate::import("ssl")
 
